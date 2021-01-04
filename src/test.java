@@ -1,24 +1,27 @@
 /*
- * Ül 1.3
+ * Ül 1.4b
  *
  * */
 
 import java.util.Scanner;
 public class test {
     public static void main(String[] args) {
-        // defineerime muutujad2
         // lubame ksutajale sisestada midagi
         Scanner sisesnd = new Scanner(System.in);
-        // selvestame kasutaja sisestatud väärtus
-        System.out.println("Sisestage astme alus: ");
-        int astmeAlus = sisesnd.nextInt();
-        // selgitame kasutajale, mida tuleb sisestada
-        System.out.println("Sisestage astendaja: ");
-        // salvestame ksutaja sisestatud väärtus
-        int astendaja = sisesnd.nextInt();
-        // arvutamine
-        int tulemus = (int) Math.pow(astmeAlus, astendaja);
-        // väljastamine
-        System.out.println(tulemus);
+        // Kasutaja andmed
+        System.out.println("Sisestage oma nimi: ");
+        String nimi = sisesnd.nextLine();
+        System.out.println("Sisestaga lubatud kiirus (km/h): ");
+        int kiirus = sisesnd.nextInt();
+        System.out.println("Sisestaga tegelik kiirus (km/h): ");
+        int tegelikkiirus = sisesnd.nextInt();
+// arvutamine
+        int vahe = kiirus - tegelikkiirus;
+        int trahv = vahe * 3;
+// arvestame maksimumiga
+        trahv = Math.min(trahv, 190);
+// väljastus
+        String lauseosa = ", kiiruse ületamise eest on teie trahv ";
+        System.out.println(nimi + lauseosa + trahv + " eurot");
     }
 }
