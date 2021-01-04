@@ -1,5 +1,5 @@
 /*
- * Ül 1.4b
+ * Ül 2.1
  *
  * */
 
@@ -9,19 +9,13 @@ public class test {
         // lubame ksutajale sisestada midagi
         Scanner sisesnd = new Scanner(System.in);
         // Kasutaja andmed
-        System.out.println("Sisestage oma nimi: ");
-        String nimi = sisesnd.nextLine();
-        System.out.println("Sisestaga lubatud kiirus (km/h): ");
-        int kiirus = sisesnd.nextInt();
-        System.out.println("Sisestaga tegelik kiirus (km/h): ");
-        int tegelikkiirus = sisesnd.nextInt();
-// arvutamine
-        int vahe = kiirus - tegelikkiirus;
-        int trahv = vahe * 3;
-// arvestame maksimumiga
-        trahv = Math.min(trahv, 190);
-// väljastus
-        String lauseosa = ", kiiruse ületamise eest on teie trahv ";
-        System.out.println(nimi + lauseosa + trahv + " eurot");
+        System.out.println("Sisesta pilvede kõrgus: ");
+        Double kõrgus = sisesnd.nextDouble();
+        if (kõrgus > 6.0) {
+            System.out.println("Need on ülemised pilved");
+        } else {
+            System.out.println("Need ei ole ülemised pilved");
+        }
     }
-}
+    }
+
