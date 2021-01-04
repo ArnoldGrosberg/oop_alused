@@ -1,5 +1,5 @@
 /*
- * Ül 2.1
+ * Ül 2.2
  *
  * */
 
@@ -9,12 +9,17 @@ public class test {
         // lubame ksutajale sisestada midagi
         Scanner sisesnd = new Scanner(System.in);
         // Kasutaja andmed
-        System.out.println("Sisesta pilvede kõrgus: ");
-        Double kõrgus = sisesnd.nextDouble();
-        if (kõrgus > 6.0) {
-            System.out.println("Need on ülemised pilved");
-        } else {
-            System.out.println("Need ei ole ülemised pilved");
+        System.out.println("Sisesta punktide summa: ");
+        Double punktid = sisesnd.nextDouble();
+        if (punktid >= 0 && punktid < 66) {
+            System.out.println("Vähem kui kandideerimiseks vajalik");
+        } else if (punktid >= 66 && punktid < 85) {
+            System.out.println("Kandideerimine vastuvõtule");
+        } else if (punktid >= 85 && punktid <= 100) {
+            System.out.println("Vastuvõtt tagatud");
+        } else if (punktid < 0 || punktid > 100) {
+            System.out.println("Vigane punktisumma");
+
         }
     }
     }
