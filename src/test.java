@@ -1,5 +1,5 @@
 /*
- * Ül 3.1
+ * Ül 3.2
  *
  * */
 
@@ -9,7 +9,18 @@ public class test {
         // lubame ksutajale sisestada midagi
         Scanner sisesnd = new Scanner(System.in);
         // Kasutaja andmed
-        System.out.println("Sisestage, mitu korda tuleb äratada: ");
+        System.out.println("Sisesta ringide arv: ");
+        int ringide_arv = sisesnd.nextInt();
+        int porgandid = 0;
+        int ring = 1;
+        // arvutamine loopiga
+        while (ring <= ringide_arv) {
+            porgandid = porgandid + (ring * (ring + 1) / 2);
+            ring++;
+        }
+        // väljastamine
+        System.out.println("Porgandite koguarv on " + porgandid);
+                /*
         int kuipalju = sisesnd.nextInt();
         // While loop
         while (kuipalju > 0) {
