@@ -12,11 +12,12 @@ public class test {
         System.out.println("Täringu arv: ");
         int täringute_arv = sisesnd.nextInt();
         // täringu väärtus veeretamisega          korrutan 6, et max on 6
-        int täring = (int) Math.round(Math.random() * 6);
-        System.out.println(täring);
-        while (täring != täringute_arv) {
-            täring = (int) Math.round(Math.random() * 6);
+        while (true) {
+            int täring = (int) Math.round(Math.random() * 6);
             System.out.println(täring);
+            if (täring == täringute_arv) {
+                break;
+            }
         }
         /*
         int ringide_arv = sisesnd.nextInt();
