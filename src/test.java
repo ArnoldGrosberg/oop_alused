@@ -1,5 +1,5 @@
 /*
- * Ül 2.3d
+ * Ül 3.1
  *
  * */
 
@@ -9,9 +9,16 @@ public class test {
         // lubame ksutajale sisestada midagi
         Scanner sisesnd = new Scanner(System.in);
         // Kasutaja andmed
-        System.out.println("Sisestage kirja suurus: ");
-        Double suurus = sisesnd.nextDouble();
-        System.out.println("Sisestage kirja teema pealkiri: ");
+        System.out.println("Sisestage, mitu korda tuleb äratada: ");
+        int kuipalju = sisesnd.nextInt();
+        // While loop
+        while (kuipalju > 0) {
+            // väljastab
+            System.out.println("Tõuse ja sära!");
+            kuipalju--;
+        }
+
+        /*System.out.println("Sisestage kirja teema pealkiri: ");
         String pealkiri = sisesnd.nextLine();
 // Miks mõlemat näitab?
         System.out.println("Kas kirjaga on kaasas fail? ");
@@ -23,6 +30,8 @@ public class test {
         } else if (pealkiri != "") {
             System.out.println("Kiri ei ole spämm");
         }
+
+         */
     }
     }
 
