@@ -1,5 +1,5 @@
 /*
- * Ül 3.2
+ * Ül 3.3
  *
  * */
 
@@ -9,7 +9,16 @@ public class test {
         // lubame ksutajale sisestada midagi
         Scanner sisesnd = new Scanner(System.in);
         // Kasutaja andmed
-        System.out.println("Sisesta ringide arv: ");
+        System.out.println("Täringu arv: ");
+        int täringute_arv = sisesnd.nextInt();
+        // täringu väärtus veeretamisega          korrutan 6, et max on 6
+        int täring = (int) Math.round(Math.random() * 6);
+        System.out.println(täring);
+        while (täring != täringute_arv) {
+            täring = (int) Math.round(Math.random() * 6);
+            System.out.println(täring);
+        }
+        /*
         int ringide_arv = sisesnd.nextInt();
         int porgandid = 0;
         int ring = 1;
@@ -20,7 +29,7 @@ public class test {
         }
         // väljastamine
         System.out.println("Porgandite koguarv on " + porgandid);
-                /*
+
         int kuipalju = sisesnd.nextInt();
         // While loop
         while (kuipalju > 0) {
