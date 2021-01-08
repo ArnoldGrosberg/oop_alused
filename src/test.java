@@ -1,35 +1,27 @@
 /*
- * Ül 6.1
- *
+ * meetod + return - näide
+ * Ül 6.2
  * */
 import java.util.Scanner;
 
 public class test {
     // bänner meetod
-    static String bänner(String reklaamlause) {
-        String reklaamlauseSuurteTähtedega = reklaamlause.toUpperCase();
-        return reklaamlauseSuurteTähtedega;
+    static double mahlapakkideArv(double ounteKogus) {
+        double pakkideArv = (int) Math.round(ounteKogus * 0.4 / 3);
+        return pakkideArv;
     }
 
     //main meetod
     public static void main(String[] args) {
         // defineerime muutujad
+
+        // selgitame kasutajale, mida tuleb sisestada
+        System.out.println("Sisestage õunte kogus kilogrammides: ");
         //lubame kasutajale sisestada midagi
         Scanner sisend = new Scanner(System.in);
-        // selgitame kasutajale, mida tuleb sisestada
-        System.out.println("Mitu korda kuvada reklaamlauset: ");
         // salvestame kasutaja sisestatud väärtus
-        int kordamine = sisend.nextInt();
-        // samuti sisendid
-        sisend = new Scanner(System.in);
-        System.out.println("Sisesta reklaamlauset: ");
-        String lause = sisend.nextLine();
-        // kordamine
-        int kord = 0;
-        while (kord < kordamine) {
-            //väljastus
-            System.out.println(bänner(lause));
-            kord++;
-        }
+        double ounteKogus = sisend.nextDouble();
+        // arvutamine
+        System.out.println(mahlapakkideArv(ounteKogus));
     }
 }
