@@ -1,27 +1,31 @@
 /*
- * meetod + return - näide
- * Ül 6.2
+ * Ül 6.3
  * */
 import java.util.Scanner;
 
 public class test {
-    // bänner meetod
-    static double mahlapakkideArv(double ounteKogus) {
-        double pakkideArv = (int) Math.round(ounteKogus * 0.4 / 3);
-        return pakkideArv;
+    // meetod
+    static double eelarve(double kulalistearv) {
+        double number = (55 + kulalistearv * 10);
+        return number;
     }
 
     //main meetod
     public static void main(String[] args) {
         // defineerime muutujad
-
         // selgitame kasutajale, mida tuleb sisestada
-        System.out.println("Sisestage õunte kogus kilogrammides: ");
+        System.out.println("Mitu inimest on kutsutud? ");
         //lubame kasutajale sisestada midagi
         Scanner sisend = new Scanner(System.in);
         // salvestame kasutaja sisestatud väärtus
-        double ounteKogus = sisend.nextDouble();
-        // arvutamine
-        System.out.println(mahlapakkideArv(ounteKogus));
+        double kutsutud = sisend.nextDouble();
+        System.out.println("Mitu inimest tuleb? ");
+        //lubame kasutajale sisestada midagi
+        sisend = new Scanner(System.in);
+        // salvestame kasutaja sisestatud väärtus
+        double kulalistearv = sisend.nextDouble();
+        // arvutamine meetotiga
+        System.out.println("Max: " + eelarve(kutsutud) + "€");
+        System.out.println("Min: " + eelarve(kulalistearv) + "€");
     }
 }
