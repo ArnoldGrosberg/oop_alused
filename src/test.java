@@ -14,11 +14,8 @@ public class test {
         numbrid[4] = 5;
 
         System.out.println(numbrid.length);
-        System.out.println(numbrid[0]);
-        System.out.println(numbrid[1]);
-        System.out.println(numbrid[2]);
-        System.out.println(numbrid[3]);
-        System.out.println(numbrid[4]);
+        for (int i = 0; i < numbrid.length; i++)
+            System.out.println(numbrid[i]);
 
 
     }
