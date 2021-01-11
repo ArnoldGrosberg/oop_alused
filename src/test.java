@@ -1,16 +1,19 @@
 /*
  * massiivid
- * ülesanne 5.1
+ * ülesanne 5.4a Jukebox
  * */
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
 public class test {
     public static void main(String[] args) {
-        // massiiv faili sisu hoidmiseks
-        ArrayList<Double> kontosisu = new ArrayList<>();
+        Scanner sisesnd = new Scanner(System.in);
+        System.out.println("Palun sisestage failinimi: ");
+        String koht = sisesnd.nextLine();
+        // massiiv faili sisu hoidmisekskont
+        ArrayList<String> kontosisu = new ArrayList<>();
         // määrame fail ja kontrollime, kas on võiamlik lugeda andmed
-        File fail = new File("C:\\Users\\arnold\\IdeaProjects\\oop_alused\\src\\konto.txt");
+        File fail = new File("C:\\Users\\arnold\\IdeaProjects\\oop_alused\\src\\" + koht);
         Scanner sisendFailist = null;
         try {
             sisendFailist = new Scanner(fail);
@@ -19,16 +22,19 @@ public class test {
         }
         // loeme failist
         while (sisendFailist.hasNextLine()) {
-            Double rida = sisendFailist.nextDouble();
+            String rida = sisendFailist.nextLine();
             kontosisu.add(rida); // lisame loetud väärtus nimekirja sisse
         }
-        sisendFailist.close();
-        // vaatame nimekirja sisu positiivsete arvutega
-        for (int i = 0; i < kontosisu.size(); i++) {
-            if (kontosisu.get(i) > 0) {
-                System.out.println(kontosisu.get(i));
-
-            }
+        System.out.println("Muusikapalade valik:");
+        int loop = 0;
+        while (loop < kontosisu.size()) {
+            System.out.println((loop + 1) + ". " + kontosisu.get(loop));
+            loop++;
         }
+        System.out.println("Valige laulu järjekorranumber: ");
+        int number = sisesnd.nextInt();
+        System.out.println("Mängitav muusikapala on " + kontosisu.get(number - 1));
+        sisendFailist.close();
     }
-}
+    }
+
