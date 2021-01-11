@@ -2,11 +2,9 @@
  * massiivid
  * ülesanne 5.1
  * */
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
-
 public class test {
     public static void main(String[] args) {
         // massiiv faili sisu hoidmiseks
