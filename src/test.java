@@ -2,22 +2,51 @@
  * Ül 5.1
  * */
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
+import java.io.IOException;
 
 public class test {
     public static void main(String[] args) {
-        int[] vastuvoetud = {2803, 2626, 2359, 1927, 2236, 2281, 2394, 2484, 2468};
-        Scanner sisend = new Scanner(System.in);
-        System.out.println("Sisesta aasta: ");
-        int aasta = sisend.nextInt();
-        int massiiviIndeks = aasta - 2011;
-        System.out.println("Vastuvõetud on " + vastuvoetud[massiiviIndeks]);
-
+        try {
+            System.out.println("Katsetamine failist lugemine.");
+            File fail = new File("C:\\Users\\arnold\\IdeaProjects\\oop_alused\\src\\vastuvoetud.txt");
+            Scanner sisendFailist = new Scanner(fail);
+            while (sisendFailist.hasNextLine()) {
+                String data = sisendFailist.nextLine();
+                System.out.println(data);
+            }
+            sisendFailist.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("Faili pole.");
+            e.printStackTrace();
+        }
     }
-
-
 }
 
+/*
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class ReadFile {
+    public static void main(String[] args) {
+        try {
+            File myObj = new File("filename.txt");
+            Scanner myReader = new Scanner(myObj);
+            while (myReader.hasNextLine()) {
+                String data = myReader.nextLine();
+                System.out.println(data);
+            }
+            myReader.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+    }
+}
+*/
 /*
 import java.util.Scanner;
 
