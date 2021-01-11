@@ -10,9 +10,9 @@ import java.util.Scanner;
 public class test {
     public static void main(String[] args) {
         // massiiv faili sisu hoidmiseks
-        ArrayList<String> aastad = new ArrayList<>();
+        ArrayList<Double> kontosisu = new ArrayList<>();
         // määrame fail ja kontrollime, kas on võiamlik lugeda andmed
-        File fail = new File("C:\\Users\\anna\\IdeaProjects\\oop_alused\\src\\vastuvoetud.txt");
+        File fail = new File("C:\\Users\\arnold\\IdeaProjects\\oop_alused\\src\\konto.txt");
         Scanner sisendFailist = null;
         try {
             sisendFailist = new Scanner(fail);
@@ -21,19 +21,16 @@ public class test {
         }
         // loeme failist
         while (sisendFailist.hasNextLine()) {
-            String rida = sisendFailist.nextLine();
-            aastad.add(rida); // lisame loetud väärtus nimekirja sisse
+            Double rida = sisendFailist.nextDouble();
+            kontosisu.add(rida); // lisame loetud väärtus nimekirja sisse
         }
         sisendFailist.close();
-        // vaatame nimekirja sisu
-        for (int i = 0; i < aastad.size(); i++) {
-            System.out.println(aastad.get(i));
+        // vaatame nimekirja sisu positiivsete arvutega
+        for (int i = 0; i < kontosisu.size(); i++) {
+            if (kontosisu.get(i) > 0) {
+                System.out.println(kontosisu.get(i));
+
+            }
         }
-        // küsime andmed kasutaja käest
-        Scanner sisendKasutajalt = new Scanner(System.in);
-        System.out.println("Sisesta aasta: ");
-        int aasta = sisendKasutajalt.nextInt();
-        sisendKasutajalt.close();
-        System.out.println("2011 aastas vastu võetud " + aastad.get(aasta - 2011));
     }
 }
