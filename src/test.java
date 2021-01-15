@@ -23,7 +23,7 @@ public class test {
     public static void main(String[] args) {
         HashMap<String, Integer> konto = new HashMap<String, Integer>();
 
-        // kui tahab siis mis nimi
+        // Kui tahab siis mis nimi
         if ((String) konto() == "Jah") {
             Scanner sisend = new Scanner(System.in);
             System.out.println("Sisestage kontonimi: ");
