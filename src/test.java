@@ -1,47 +1,37 @@
 /*
- * massiivid
- * ülesanne 6.4b Mündid
+ * hashMap tüüpi object
+ * võti ja väärtus String või int või muu
+ * inimese nimi võti ja hüüdnimi väärtused
+ *
+ * matti - mage
+ * mihhail - mixu
+ * artu -arppa
+ *
+ *
  * */
 
 import java.io.File;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Locale;
 import java.util.Scanner;
 public class test {
 
     public static void main(String[] args) {
-        Scanner sisesnd = new Scanner(System.in);
-        System.out.println("Palun sisestage failinimi: ");
-        String failinimi = sisesnd.nextLine();
-        // massiiv faili sisu hoidmisekskont
-        ArrayList<Integer> mündid = new ArrayList<>();
-        // määrame fail ja kontrollime, kas on võiamlik lugeda andmed
-        File fail = new File("C:\\Users\\arnold\\IdeaProjects\\oop_alused\\src\\" + failinimi);
-        Scanner sisendFailist = null;
-        try {
-            sisendFailist = new Scanner(fail);
-        } catch (Exception e) {
-            System.out.println("Faili pole - " + e.getMessage());
+        HashMap<String, String> grupp = new HashMap<String, String>();
+        grupp.put("matti", "mage");
+        grupp.put("mihhail", "mixu");
+        grupp.put("artu", "arppa");
+        System.out.println(grupp.values());
+        for (String nimi : grupp.keySet()) {
+            System.out.println(nimi + " - " + grupp.get(nimi));
         }
-        // loeme failist
-        while (sisendFailist.hasNextInt()) {
-            int rida = sisendFailist.nextInt();
-            mündid.add(rida); // lisame loetud väärtus nimekirja sisse
-        }
-        sisendFailist.close();
-        int summa = pronksikarva_summa(mündid);
-        System.out.println(summa);
-    }
-
-    // funktsioon(meetod)
-    static int pronksikarva_summa(ArrayList mündid) {
-        int summa = 0;
-        for (int i = 0; i < mündid.size(); i++) {
-            if ((int) mündid.get(i) == 1 || (int) mündid.get(i) == 2 || (int) mündid.get(i) == 5) {
-                summa += (int) mündid.get(i);
-            }
-        }
-        return summa;
+        Scanner sisend = new Scanner(System.in);
+        System.out.println("Sisestage nimi: ");
+        String nimi = sisend.nextLine();
+        nimi = nimi.toLowerCase();
+        System.out.println(nimi + " - " + grupp.get(nimi));
     }
 }
