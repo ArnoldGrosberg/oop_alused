@@ -2,6 +2,24 @@ public class Konto {
     // muutujad
     public String omanik;
     public Double bilans;
+
+    // Konstruktor
+
+
+    public Konto(String omanik) {
+        this.omanik = omanik;
+        this.bilans = 0.0;
+        /*
+        //this.looKonto(omanikuNimi, 0.0);
+        this.omanik = omanikuNimi;
+        this.bilans = 0.0;
+    }
+    public Konto(String omanukuNimi, Double summa){
+        this.looKonto(omanukuNimi, summa);
+
+     */
+    }
+
     // meetodid
 
     public void looKonto(String omanikuNimi, Double summa) {
