@@ -16,5 +16,6 @@ public class Test_22_01_ul2 {
 
         loendur.algvaartusta();
         loendur.valjastaVaartus();
+
     }
 }
