@@ -9,8 +9,11 @@ public class Menyy {
     }
 
     public void lisaSook(String sook) {
-        soogid.add(sook);
+        if (!soogid.contains(sook)) {
+            soogid.add(sook);
+        }
     }
+
     // lisa meetodid siia
 }
 
