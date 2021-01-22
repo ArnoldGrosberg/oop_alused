@@ -6,5 +6,7 @@ public class Test_22_01_ul2 {
         soogid.lisaSook("Fish'n'Chips");
         soogid.lisaSook("Hapukapsas");
         soogid.valjastaMenyy();
+        soogid.puhastaMenyy();
+        soogid.valjastaMenyy();
     }
 }
