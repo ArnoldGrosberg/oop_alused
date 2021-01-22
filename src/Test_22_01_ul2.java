@@ -1,12 +1,20 @@
 public class Test_22_01_ul2 {
-
     public static void main(String[] args) {
-        Menyy soogid = new Menyy();
-        soogid.lisaSook("Burger");
-        soogid.lisaSook("Fish'n'Chips");
-        soogid.lisaSook("Hapukapsas");
-        soogid.valjastaMenyy();
-        soogid.puhastaMenyy();
-        soogid.valjastaMenyy();
+        KahanevLoendur loendur = new KahanevLoendur(100);
+
+        loendur.valjastaVaartus();
+
+        loendur.kahane();
+        ;
+        loendur.valjastaVaartus();
+
+        loendur.kahane();
+        loendur.valjastaVaartus();
+
+        loendur.reset();
+        loendur.valjastaVaartus();
+
+        loendur.algvaartusta();
+        loendur.valjastaVaartus();
     }
 }
