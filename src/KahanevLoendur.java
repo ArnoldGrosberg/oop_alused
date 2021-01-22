@@ -15,5 +15,9 @@ public class KahanevLoendur {
         }
         // kirjuta siia kood, mille abil loenduri vaartus väheneb 1 võrra
     }
+
+    public void reset() {
+        this.vaartus = 0;
+    }
     // ja siia ülejäänud vajalikud meetodid
 }
