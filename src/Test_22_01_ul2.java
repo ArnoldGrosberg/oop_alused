@@ -1,9 +1,10 @@
 public class Test_22_01_ul2 {
+
     public static void main(String[] args) {
-        Menyy kohvik = new Menyy();
-        kohvik.lisaSook("puder");
-        kohvik.lisaSook("puder");
-        kohvik.lisaSook("kartul");
-        System.out.println(kohvik);
+        Menyy soogid = new Menyy();
+        soogid.lisaSook("Burger");
+        soogid.lisaSook("Fish'n'Chips");
+        soogid.lisaSook("Hapukapsas");
+        soogid.valjastaMenyy();
     }
 }

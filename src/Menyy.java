@@ -14,6 +14,13 @@ public class Menyy {
         }
     }
 
+
+    public void valjastaMenyy() {
+        for (int i = 0; i < soogid.size(); i++) {
+            System.out.println(soogid.get(i));
+        }
+    }
     // lisa meetodid siia
+
 }
 
