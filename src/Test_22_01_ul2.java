@@ -7,5 +7,4 @@ public class Test_22_01_ul2 {
         loendur.kahane();
         loendur.valjastaVaartus();
     }
-
 }

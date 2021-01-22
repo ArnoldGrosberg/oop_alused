@@ -13,6 +13,5 @@ public class KahanevLoendur {
         this.vaartus--;
         // kirjuta siia kood, mille abil loenduri vaartus väheneb 1 võrra
     }
-
     // ja siia ülejäänud vajalikud meetodid
 }
