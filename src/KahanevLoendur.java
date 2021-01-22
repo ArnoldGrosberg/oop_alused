@@ -10,7 +10,9 @@ public class KahanevLoendur {
     }
 
     public void kahane() {
-        this.vaartus--;
+        if (this.vaartus > 0) {
+            this.vaartus--;
+        }
         // kirjuta siia kood, mille abil loenduri vaartus väheneb 1 võrra
     }
     // ja siia ülejäänud vajalikud meetodid
