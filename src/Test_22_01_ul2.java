@@ -4,10 +4,17 @@ public class Test_22_01_ul2 {
 
         loendur.valjastaVaartus();
 
-        loendur.reset();
+        loendur.kahane();
+        ;
         loendur.valjastaVaartus();
 
         loendur.kahane();
+        loendur.valjastaVaartus();
+
+        loendur.kahane();
+        loendur.valjastaVaartus();
+
+        loendur.algvaartusta();
         loendur.valjastaVaartus();
     }
 }

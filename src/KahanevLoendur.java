@@ -19,5 +19,9 @@ public class KahanevLoendur {
     public void reset() {
         this.vaartus = 0;
     }
+
+    public void algvaartusta() {
+        this.vaartus = 100;
+    }
     // ja siia ülejäänud vajalikud meetodid
 }
