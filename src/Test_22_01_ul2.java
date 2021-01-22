@@ -6,7 +6,6 @@ public class Test_22_01_ul2 {
 
         loendur.reset();
         loendur.valjastaVaartus();
-        ;
 
         loendur.kahane();
         loendur.valjastaVaartus();
