@@ -1,40 +1,16 @@
-/*
- * Ristkülik kapseldus
- *
- */
 public class Test {
     public static void main(String[] args) {
-        Inimene matti = new Inimene("Matti");
-        Inimene john = new Inimene("John");
+        Loom minuLoom = new Loom("Minu loom");
+        System.out.println(minuLoom);
+        minuLoom.jalutan();
+        minuLoom.soon();
+        minuLoom.haal();
 
-        matti.setPikkus(1.80);
-        matti.setMass(69.0);
-        System.out.println(matti.getNimi() + " on " + matti.getPikkus() + "m pikk ja kaalub " + matti.getMass() + " kg");
-        System.out.println("kmi = " + matti.kmi());
-        System.out.printf("kmi = %.2f\n", matti.kmi());
-
-        matti.suurendakaal();
-        System.out.println(matti.getNimi() + " on " + matti.getPikkus() + "m pikk ja kaalub " + matti.getMass() + " kg");
-        System.out.printf("kmi = %.2f\n", matti.kmi());
-
-        matti.suurendakaal(5.0);
-        System.out.println(matti.getNimi() + " on " + matti.getPikkus() + "m pikk ja kaalub " + matti.getMass() + " kg");
-        System.out.printf("kmi = %.2f\n", matti.kmi());
-
-        matti.suurendakaal(Math.random() * 100);
-        System.out.println(matti.getNimi() + " on " + matti.getPikkus() + "m pikk ja kaalub " + matti.getMass() + " kg");
-        System.out.printf("kmi = %.2f\n", matti.kmi());
-
-        matti.normaalkaal();
-
-        System.out.println(matti.getNimi() + " on " + matti.getPikkus() + "m pikk ja kaalub " + matti.getMass() + " kg");
-        System.out.printf("kmi = %.2f\n", matti.kmi());
-
-
-        john.setPikkus(175);
-        john.setMass(64);
-
-        System.out.printf(matti.getNimi() + ", kehamassiindeks: " + "%5.2f%n", matti.kmi());
-        System.out.printf(john.getNimi() + ", kehamassiindeks: " + "%5.2f%n", john.kmi());
+        Loom minuKass = new Loom("Minu loom");
+        System.out.println(minuKass);
+        minuKass.jalutan();
+        minuKass.soon();
+        minuKass.haal();
+        minuKass.Kass();
     }
 }
