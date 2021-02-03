@@ -7,6 +7,7 @@ public class Inimene {
         this.id = Inimene.kasutatudJk;
         this.jk = this.id;
         this.id = ++Inimene.kasutatudJk;
+        System.out.println("ID = " + this.id + " jk = " + this.jk);
     }
 
 }
