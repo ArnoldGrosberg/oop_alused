@@ -1,6 +1,14 @@
 public class Test {
     public static void main(String[] args) {
-        yl4_omaeesnimi_perenimi minuInimene = new yl4_omaeesnimi_perenimi();
-        yl4_omaeesnimi_perenimi.getInfo();
+        Auto auto1 = new Auto();
+        auto1.km = 100;
+        System.out.println("Auto1 läbitud teekond = " + auto1.km);
+        Auto auto2 = new Auto();
+        auto2.km = 85;
+        System.out.println("Auto1 läbitud teekond = " + auto1.km);
+        System.out.println("Auto2 läbitud teekond = " + auto2.km);
+
+        System.out.println(Auto.km);
+
     }
 }
