@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Test {
     public static void main(String[] args) {
         Restoraan restoraan = new Restoraan();
@@ -25,6 +27,17 @@ public class Test {
         System.out.println("Tere tulemast " + restoraan3.getRestoraaniNimi() + " restoraani! " + "Meil on täna menüüs: " + restoraan3.getSoogiTyyp() + " Täna on meil " + restoraan3.getKylalisteArv() + " külalist.");
         restoraan3.teenindatudKylalisedPaevas(90);
         System.out.println(" Täna on meil nüüd " + restoraan3.getKylalisteArv() + " külalist.");
+
+        JaatiseKiosk restoraan4 = new JaatiseKiosk();
+        restoraan4.setRestoraaniNimi("Jäätise Kiosk");
+        restoraan4.teenindatudKylalisedPaevas(90);
+        System.out.println(restoraan4.avaRestoraan());
+        restoraan4.lisaJaatiseValik("Mango");
+        restoraan4.lisaJaatiseValik("Maasika");
+        System.out.println("Tere tulemast " + restoraan4.getRestoraaniNimi() + " restoraani! " + "Meil on täna menüüs: " + restoraan4.getSoogiTyyp() + " Täna on meil " + restoraan4.getKylalisteArv() + " külalist.");
+        restoraan4.teenindatudKylalisedPaevas(90);
+        System.out.println(" Täna on meil nüüd " + restoraan4.getKylalisteArv() + " külalist.");
+
 
     }
 }
