@@ -1,24 +1,37 @@
 public class Restoraan {
-    private static String restoraaniNimi = "pole";
-    private static String soogiTyyp = "pole";
+    private String restoraaniNimi = "pole";
+    private String soogiTyyp = "pole";
+    private int kylalisteArv = 0;
 
-    public static String getRestoraaniNimi() {
+    public void teenindatudKylalisedPaevas(int kylalised) {
+        this.kylalisteArv = this.kylalisteArv + kylalised;
+    }
+
+    public int getKylalisteArv() {
+        return kylalisteArv;
+    }
+
+    public void setKylalisteArv(int kylalisteArv) {
+        this.kylalisteArv = kylalisteArv;
+    }
+
+    public String getRestoraaniNimi() {
         return restoraaniNimi;
     }
 
-    public static void setRestoraaniNimi(String restoraaniNimi) {
-        Restoraan.restoraaniNimi = restoraaniNimi;
+    public void setRestoraaniNimi(String restoraaniNimi) {
+        this.restoraaniNimi = restoraaniNimi;
     }
 
-    public static String getSoogiTyyp() {
+    public String getSoogiTyyp() {
         return soogiTyyp;
     }
 
-    public static void setSoogiTyyp(String soogiTyyp) {
-        Restoraan.soogiTyyp = soogiTyyp;
+    public void setSoogiTyyp(String soogiTyyp) {
+        this.soogiTyyp = soogiTyyp;
     }
 
-    public static String avaRestoraan() {
+    public String avaRestoraan() {
         return "Restoraan on lahti!";
     }
 
