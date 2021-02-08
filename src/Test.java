@@ -1,7 +1,20 @@
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 
 public class Test {
     public static void main(String[] args) {
+
+        Tuba tuba = new Tuba();
+        tuba.setPikkus(6.0);
+        tuba.setLaius(3.0);
+        tuba.setKõrgus(2.7);
+        System.out.println(tuba.getPindala());
+        tuba.lisaAkkenUks(1.0, 1.0);
+        tuba.lisaAkkenUks(1.0, 1.0);
+        tuba.lisaAkkenUks(1.0, 1.0);
+        System.out.println(tuba.tööPind());
+    }
+    /* public static void main(String[] args) {
         Restoraan restoraan = new Restoraan();
         restoraan.setRestoraaniNimi("Burgeri");
         restoraan.teenindatudKylalisedPaevas(10);
@@ -34,10 +47,12 @@ public class Test {
         System.out.println(restoraan4.avaRestoraan());
         restoraan4.lisaJaatiseValik("Mango");
         restoraan4.lisaJaatiseValik("Maasika");
-        System.out.println("Tere tulemast " + restoraan4.getRestoraaniNimi() + " restoraani! " + "Meil on täna menüüs: " + restoraan4.getSoogiTyyp() + " Täna on meil " + restoraan4.getKylalisteArv() + " külalist.");
+        System.out.println("Tere tulemast " + restoraan4.getRestoraaniNimi() + " restoraani! " + "Meil on täna menüüs: " + restoraan4.jaatiseValik() + " Täna on meil " + restoraan4.getKylalisteArv() + " külalist.");
         restoraan4.teenindatudKylalisedPaevas(90);
         System.out.println(" Täna on meil nüüd " + restoraan4.getKylalisteArv() + " külalist.");
 
 
     }
+
+     */
 }
