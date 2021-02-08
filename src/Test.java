@@ -1,18 +1,48 @@
 import java.util.ArrayList;
-
+import java.util.Scanner;
 public class Test {
     public static void main(String[] args) {
+        yl7_omaeesnimi_perenimi tuba = new yl7_omaeesnimi_perenimi();
+        Scanner skanni = new Scanner(System.in);
+        System.out.println("Lisa täpne toa Pikkus: ");
+        Double sisestus = skanni.nextDouble();
+        tuba.setPikkus(sisestus);
+        Scanner skanni1 = new Scanner(System.in);
+        System.out.println("Lisa täpne toa laius: ");
+        Double sisestus4 = skanni1.nextDouble();
+        tuba.setLaius(sisestus4);
+        Scanner skanni2 = new Scanner(System.in);
+        System.out.println("Lisa täpne toa Kõrgus: ");
+        Double sisestus5 = skanni2.nextDouble();
+        tuba.setKõrgus(sisestus5);
+        System.out.println("Toa pindala on: " + tuba.pindala());
 
-        Tuba tuba = new Tuba();
-        tuba.setPikkus(6.0);
-        tuba.setLaius(3.0);
-        tuba.setKõrgus(2.7);
-        tuba.setPindala();
-        System.out.println(tuba.getPindala());
-        tuba.lisaAkkenUks(1.0, 1.0);
-        tuba.lisaAkkenUks(1.0, 1.0);
-        tuba.lisaAkkenUks(1.0, 2.0);
-        System.out.println(tuba.tööPind());
+        Scanner sisestustapeet = new Scanner(System.in);
+        System.out.println("Mis on tapeedirulli laius? ");
+        Double laius = sisestustapeet.nextDouble();
+        Scanner sisestustapeet2 = new Scanner(System.in);
+        System.out.println("Mis on tapeedirulli pikkus? ");
+        Double pikkus = sisestustapeet2.nextDouble();
+        System.out.println("On vaja: " + tuba.tapeedirull(laius, pikkus) + " tapeedirulli, mille laius on " + laius + " ja pikkus on " + pikkus + ", et katta toa seinad.");
+
+        while (true) {
+            Scanner skanni3 = new Scanner(System.in);
+            System.out.println("Tahad lisada aknaid ja uksi?(Jah/Ei) ");
+            String sisestus7 = skanni3.nextLine();
+            if (sisestus7.equals("Jah") == true) {
+                Scanner skanni0 = new Scanner(System.in);
+                System.out.println("Mis on ukse või akna laius? ");
+                Double sisestus00 = skanni0.nextDouble();
+                Scanner skanni000 = new Scanner(System.in);
+                System.out.println("Mis on ukse või akna pikkus? ");
+                Double sisestus0000 = skanni000.nextDouble();
+                tuba.lisaAkkenUks(sisestus00, sisestus0000);
+                System.out.println("Toa seinade pindala (tööpindala): " + tuba.tööPind());
+                System.out.println("On vaja: " + tuba.tapeedirull(laius, pikkus) + " tapeedirulli, mille laius on " + laius + " ja pikkus on " + pikkus + ", et katta toa seinad.");
+
+            }
+
+        }
     }
     /* public static void main(String[] args) {
         Restoraan restoraan = new Restoraan();
