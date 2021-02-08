@@ -1,20 +1,23 @@
 import java.util.ArrayList;
 
 public class Tuba extends AknadUksed {
-    ArrayList<Double> aknad_uksed = new ArrayList<Double>();
     private Double pikkus = 0.0;
     private Double laius = 0.0;
     private Double kõrgus = 0.0;
-    private Double pindala = 2 * this.kõrgus * (this.pikkus * this.laius);
+    ArrayList<Double> aknad_uksed = new ArrayList<Double>();
+    private Double pindala = 0.0;
 
     public void lisaAkkenUks(Double laius, Double kõrgus) {
-        this.aknad_uksed.add(laius);
-        this.aknad_uksed.add(kõrgus);
+        AknadUksed aknadUksed = new AknadUksed();
+        aknadUksed.setLaius(laius);
+        aknadUksed.setKõrgus(kõrgus);
+        aknadUksed.setPindala();
+        this.aknad_uksed.add(aknadUksed.getPindala());
     }
 
     public Double tööPind() {
-        Double uus_pindala = this.pindala;
-        for (int element = 0; element > aknad_uksed.size(); element++) {
+        Double uus_pindala = this.getPindala();
+        for (int element = 0; element < aknad_uksed.size(); element++) {
             uus_pindala = uus_pindala - aknad_uksed.get(element);
         }
         return uus_pindala;
@@ -46,5 +49,9 @@ public class Tuba extends AknadUksed {
 
     public Double getPindala() {
         return pindala;
+    }
+
+    public void setPindala() {
+        this.pindala = this.getKõrgus() * (this.getPikkus() * this.getLaius());
     }
 }

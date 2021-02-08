@@ -1,15 +1,7 @@
 public class AknadUksed {
-    private Double pikkus = 0.0;
     private Double laius = 0.0;
-    private Double pindala = this.pikkus * this.laius;
-
-    public Double getPikkus() {
-        return pikkus;
-    }
-
-    public void setPikkus(Double pikkus) {
-        this.pikkus = pikkus;
-    }
+    private Double kõrgus = 0.0;
+    private Double pindala = 0.0;
 
     public Double getLaius() {
         return laius;
@@ -19,7 +11,20 @@ public class AknadUksed {
         this.laius = laius;
     }
 
+    public Double getKõrgus() {
+        return kõrgus;
+    }
+
+    public void setKõrgus(Double kõrgus) {
+        this.kõrgus = kõrgus;
+    }
+
     public Double getPindala() {
         return pindala;
+    }
+
+    public void setPindala() {
+        this.pindala = this.getLaius() * this.getKõrgus();
+        ;
     }
 }

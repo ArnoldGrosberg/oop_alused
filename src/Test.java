@@ -1,4 +1,3 @@
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 
 public class Test {
@@ -8,10 +7,11 @@ public class Test {
         tuba.setPikkus(6.0);
         tuba.setLaius(3.0);
         tuba.setKõrgus(2.7);
+        tuba.setPindala();
         System.out.println(tuba.getPindala());
         tuba.lisaAkkenUks(1.0, 1.0);
         tuba.lisaAkkenUks(1.0, 1.0);
-        tuba.lisaAkkenUks(1.0, 1.0);
+        tuba.lisaAkkenUks(1.0, 2.0);
         System.out.println(tuba.tööPind());
     }
     /* public static void main(String[] args) {
