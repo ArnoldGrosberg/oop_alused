@@ -5,7 +5,7 @@ public class Tuba extends AknadUksed {
     private Double pikkus = 0.0;
     private Double laius = 0.0;
     private Double kõrgus = 0.0;
-    private Double pindala = 2 * getKõrgus() * (getPikkus() * getLaius());
+    private Double pindala = 2 * kõrgus * (this.pikkus * this.laius);
 
     public void lisaAkkenUks(Double laius, Double kõrgus) {
         this.aknad_uksed.add(laius);
