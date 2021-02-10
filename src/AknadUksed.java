@@ -1,8 +1,7 @@
 public class AknadUksed {
     private Double laius = 0.0;
     private Double kõrgus = 0.0;
-    private Double pindala = 0.0;
-
+    // Getterid ja setterid
     public Double getLaius() {
         return laius;
     }
@@ -19,12 +18,8 @@ public class AknadUksed {
         this.kõrgus = kõrgus;
     }
 
+    // Akna või ukse pindala arvutamise meetod
     public Double getPindala() {
-        return pindala;
-    }
-
-    public void setPindala() {
-        this.pindala = this.getLaius() * this.getKõrgus();
-        ;
+        return this.getLaius() * this.getKõrgus();
     }
 }

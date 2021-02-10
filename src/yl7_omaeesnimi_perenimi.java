@@ -4,34 +4,38 @@ public class yl7_omaeesnimi_perenimi {
     private Double kõrgus = 0.0;
     private Double aknad_uksed = 0.0;
 
+    // Tapeedirullide meetod
     public int tapeedirull(Double laius, Double pikkus) {
         Double tapeedirull = laius * pikkus;
         Double tapeedirullid = 0.0;
         int miturulli = 0;
-        while (tapeedirullid < this.tööPind()) {
+        while (tapeedirullid <= this.tööPind()) {
             tapeedirullid += tapeedirull;
             miturulli++;
         }
         return miturulli;
     }
 
+    // Akna ja ukse lisamise meetod
     public void lisaAkkenUks(Double laius, Double kõrgus) {
         AknadUksed aknadUksed = new AknadUksed();
         aknadUksed.setLaius(laius);
         aknadUksed.setKõrgus(kõrgus);
-        aknadUksed.setPindala();
         setAknad_uksed(getAknad_uksed() + aknadUksed.getPindala());
     }
 
+    // Pindala arvutamise meetod
     public Double pindala() {
         return this.getKõrgus() * (this.getPikkus() * this.getLaius());
     }
 
+    // Tööpinna arvutamise meetod
     public Double tööPind() {
         Double uus_pindala = pindala() - aknad_uksed;
         return uus_pindala;
     }
 
+    // Getterid ja setterid
     public Double getPikkus() {
         return pikkus;
     }

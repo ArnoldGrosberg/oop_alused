@@ -1,3 +1,4 @@
+// vana lahendus listiga ja pindala salvestamisega
 import java.util.ArrayList;
 
 public class Tuba extends AknadUksed {
