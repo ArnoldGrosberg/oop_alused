@@ -12,7 +12,7 @@ public class Tuba extends AknadUksed {
         AknadUksed aknadUksed = new AknadUksed();
         aknadUksed.setLaius(laius);
         aknadUksed.setKõrgus(kõrgus);
-        aknadUksed.setPindala();
+        //aknadUksed.setPindala();
         this.aknad_uksed.add(aknadUksed.getPindala());
     }
 
