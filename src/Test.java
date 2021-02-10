@@ -2,6 +2,24 @@ import java.util.ArrayList;
 import java.util.Scanner;
 public class Test {
     public static void main(String[] args) {
+        Sein seinPohi = new Sein("põhi sein");
+        Sein seinLouna = new Sein("lõuna sein");
+        Sein seinLaane = new Sein("lääne sein");
+        Sein seinIda = new Sein("ida sein");
+
+        System.out.println(seinIda.getSuund());
+        Lagi lagi = new Lagi(2.5, "helesinine");
+        System.out.println(lagi.getKorgus());
+        Voodi voodi = new Voodi("kahele", 2, 2, 1, 70);
+        voodi.valmis();
+        Lamp lamp = new Lamp("Klassikaline", false);
+
+        Magamistuba magamistuba = new Magamistuba("külaliste magamistuba", seinPohi, seinIda, seinLaane, seinLouna, lagi, voodi, lamp);
+        magamistuba.valmistaVoodi();
+        magamistuba.valmistaLamp();
+        System.out.println(magamistuba.getLamp().isSisseLulitatud());
+    }
+        /*
         yl7_omaeesnimi_perenimi tuba = new yl7_omaeesnimi_perenimi();
         Scanner skanni = new Scanner(System.in);
         System.out.println("Lisa täpne toa Pikkus: ");
@@ -44,6 +62,8 @@ public class Test {
 
         }
     }
+
+         */
     /* public static void main(String[] args) {
         Restoraan restoraan = new Restoraan();
         restoraan.setRestoraaniNimi("Burgeri");
