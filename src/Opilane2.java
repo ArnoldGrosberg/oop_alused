@@ -24,4 +24,5 @@ public class Opilane2 {
     for (String teadmine : teadmised) {
         System.out.println(teadmine);
     }
-}*/
+}
+*/
