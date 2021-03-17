@@ -19,7 +19,7 @@ public class Main extends Application{
         Scene scene = new Scene(group);
 
         stage.setScene(scene);
-        stage.setTitle("Esimene JavaFX rakendus");
+        stage.setTitle("Esimene JavaFX rakendus.");
         stage.setWidth(300);
         stage.setHeight(250);
         stage.show();
