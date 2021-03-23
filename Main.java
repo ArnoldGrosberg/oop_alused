@@ -1,9 +1,10 @@
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.Priority;
-import javafx.stage.Stage;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.layout.Priority;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
 public class Main extends Application{
     public static void main(String[] args){
@@ -13,18 +14,25 @@ public class Main extends Application{
     @Override
     public void start(Stage stage) {
 
-        HBox hbox = new HBox();
-        Button button1 = new Button("Add");
-        Button button2 = new Button("Remove");
-        HBox.setHgrow(button1, Priority.ALWAYS);
-        HBox.setHgrow(button2, Priority.ALWAYS);
-        button1.setMaxWidth(Double.MAX_VALUE);
-        button2.setMaxWidth(Double.MAX_VALUE);
-        hbox.getChildren().addAll(button1,button2);
-        Scene scene = new Scene(hbox, 300, 150);
+        Button okBtn = new Button("OK");
+        Button cancelBtn = new Button("Cancel");
+        Label lbl = new Label("Select");
+
+        VBox vbox = new VBox(15);
+
+        VBox.setVgrow(okBtn, Priority.ALWAYS);
+        okBtn.setMaxHeight(Double.MAX_VALUE);
+        okBtn.setMaxWidth(100);
+        cancelBtn.setMaxWidth(100);
+        // VBox täislaius
+        // cancelBtn.setMaxWidth(Double.MAX_VALUE);
+        vbox.getChildren().addAll(lbl,okBtn,cancelBtn);
+
+
+        Scene scene = new Scene(vbox, 300, 150);
         stage.setScene(scene);
 
-        stage.setTitle("HBox in JavaFX");
+        stage.setTitle("VBox in JavaFX");
 
         stage.show();
     }
