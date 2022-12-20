@@ -2,53 +2,53 @@ import java.util.ArrayList;
 
 public class Test {
     public static void main(String[] args) {
-        // moodustame õpetatavate teemade nimekirja
-        ArrayList<String> teemad = new ArrayList<>();
-        teemad.add("OOP");
-        teemad.add("Pärilus");
-        teemad.add("Kapseldus");
-        teemad.add("Kompositsioon");
-        // loome õpetaja
-        Opetaja opetaja = new Opetaja("Anna");
+        // List of subjects
+        ArrayList<String> subjects = new ArrayList<>();
+        subjects.add("OOP");
+        subjects.add("Inheritance");
+        subjects.add("Encapsulation");
+        subjects.add("Composition");
+        // Create teacher
+        Teacher teacher = new Teacher("Anna");
 
-        // Loome klass
-        ArrayList<Opilane> ita21 = new ArrayList<>();
-        Opilane mati = new Opilane("Mati");
-        Opilane kati = new Opilane("Kati");
+        // Create group
+        ArrayList<Student> ita21 = new ArrayList<>();
+        Student mati = new Student("Mati");
+        Student kati = new Student("Kati");
         ita21.add(mati);
         ita21.add(kati);
 
-        // Õpetaja õpetab oma õpilased
-        oppetoo(teemad, ita21, opetaja);
+        // Teacher teaches subjects to the group
+        education(subjects, ita21, teacher);
 
-        // teadmiste kontroll pärast aine lõpetamiset
-        teadmisteKontroll(ita21);
-        // ühe nädala pärast Mati unustab teemat Kapseldust
-        mati.unusta("Kapseldus");
-        // kontrollime uuesti teadmised
-        teadmisteKontroll(ita21);
-        // las Mati uuesti õpib kalselduse teemad
-        mati.opib("Kapseldus");
-        // kontrollime uuesti teadmised
-        teadmisteKontroll(ita21);
+        // Exam after teaching
+        knowledgeExamination(ita21);
+        // After a week Mati forgets encapsulation
+        mati.forget("Encapsulation");
+        // Check again the knowledge of the group
+        knowledgeExamination(ita21);
+        // Mati learns again encapsulation subjects
+        mati.learn("Encapsulation");
+        // Check again the knowledge of the group
+        knowledgeExamination(ita21);
 
 
     }
 
-    public static void teadmisteKontroll(ArrayList<Opilane> grupp) {
-        for (Opilane opilane : grupp) {
-            System.out.println("Opilane " + opilane.getNimi() + " teadmised:");
-            for (String teadmine : opilane.getTeadmised()) {
-                System.out.println(teadmine);
+    public static void knowledgeExamination(ArrayList<Student> group) {
+        for (Student student : group) {
+            System.out.println("Student " + student.getName() + " knowledge:");
+            for (String knowledge : student.getKnowledge()) {
+                System.out.println(knowledge);
             }
             System.out.println();
         }
     }
 
-    public static void oppetoo(ArrayList<String> teemad, ArrayList<Opilane> grupp, Opetaja opetaja) {
-        for (String teema : teemad) {
-            for (Opilane opilane : grupp) {
-                opetaja.opetab(opilane, teema);
+    public static void education(ArrayList<String> subjects, ArrayList<Student> group, Teacher teacher) {
+        for (String subject : subjects) {
+            for (Student student : group) {
+                teacher.teaches(student, subject);
             }
         }
     }
